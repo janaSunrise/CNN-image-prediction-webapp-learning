@@ -42,13 +42,25 @@
   
   pip3 install -r requirements.txt
   ```
+
+  6. Add the database to the project for saving images and predictions
+  ```
+  python manage.py makemigrations
+        or, if the above doesn't work
+  python manage.py makemigrations cnn
+  ```
+
+  and, Create the database by executing this command:
+  ```
+  python manage.py migrate
+  ```
       
-  6. Activate the server in localhost:8000:
+  7. Activate the server in localhost:8000:
   ```
   python manage.py runserver
   ```
       
-  7. Go to the browser and access local host:
+  8. Go to the browser and access local host:
   <p>In url bar, search "localhost:8000" or any similar local hosts.</p>
       
 
