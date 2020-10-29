@@ -17,7 +17,7 @@ from keras import backend as K
 
 
 class Classification(models.Model):
-    img = models.ImageField(upload_to='images')
+    img = models.ImageField()
     prediction = models.CharField(max_length=200, blank=True)
 
     class Meta:
@@ -44,7 +44,7 @@ class Classification(models.Model):
         result_decode = imagenet_utils.decode_predictions(result)
 
         for (i, (predId, pred, prob)) in enumerate(result_decode[0]):
-            return f"{pred} [{prob * 100:.2f}%]"
+            return f"{pred.replace('_', ' ')} [{prob * 100:.2f}%]"
 
     def save(self, *args, **kwargs):
         self.prediction = self.predict()
