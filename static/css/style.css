@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+body {
+    font-family: 'Expletus Sans', cursive;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #5BC0BE;
+    height: 90vh;
+}
+
+#nav-link {
+    color: white;
+}
+
+#center {
+    text-align: center;
+}

@@ -1,0 +1,13 @@
+__pycache__/
+
+.idea/
+.vscode/
+.spyproject/
+
+TODO
+.env
+
+*.db
+*.sqlite
+*.sqlite3
+media/
