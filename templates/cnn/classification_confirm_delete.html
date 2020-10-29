@@ -1,17 +1,17 @@
 {% extends "cnn/base.html" %}
 
 {% block content %}
-<div class="card align-items-center">
+<div class="card align-items-center card-custom-color" id="white-text">
     <form method="POST">
         <div class="card-body">
-            <h4>
+            <h4 style="margin-bottom: 6%">
                 <strong>
-                    Delete the predicted image?
+                    Are you sure to delete the predicted image?
                 </strong>
             </h4>
             {% csrf_token %}
             <div class="card-block text-center">
-                <button class="btn btn-warning" type="submit">Delete</button>
+                <button class="btn btn-warning" type="submit" style="margin-right: 5%;">Delete</button>
                 <a class="btn btn-primary" href="{% url 'list' %}">Back</a>
             </div>
         </div>

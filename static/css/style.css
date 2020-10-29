@@ -2,13 +2,28 @@
 
 body {
     font-family: 'Expletus Sans', cursive;
+
     margin: 0;
     padding: 0;
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #5BC0BE;
+    background-color: #060930;
     height: 90vh;
+}
+
+.custom-navbar {
+    background-color: #060930;
+    /* background-color: #000000; */
+}
+
+#white-text {
+    color: #FFFFFF !important;
+}
+
+.card-custom-color {
+    background-color: #0f3057;
 }
 
 #nav-link {

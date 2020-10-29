@@ -2,22 +2,21 @@
 
 {% block content %}
 
-<h4 style="font-size: 30px; margin-left: 41%; margin-top: 2%; margin-bottom: 2%;">
-    <strong>New Prediction</strong>
+<h4 id="white-text" style="font-size: 32px; margin-left: 38.5%; margin-top: 3%; margin-bottom: 4%;">
+    <strong>Make a Prediction</strong>
 </h4>
 
 <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-
     <div class="input-group mb-3">
         <div class="custom-file">
             {{ form.img }}
             <label class="custom-file-label" for="inputGroupFile03">
-                Choose the Image
+                Choose the Image File
             </label>
         </div>
     </div>
-    <input type="submit" value="Predict!" class="btn btn-primary" style="width: 150px; margin-left: 43%;"/> 
+    <input type="submit" value="Let's Predict!" class="btn btn-primary" style="width: 170px; margin-left: 43%; margin-top: 3%;"/> 
 
 </form>
     
