@@ -21,4 +21,4 @@ imageio = "*"
 python_version = "3.8"
 
 [scripts]
-start = "streamlit run main.py"
+start = "streamlit run src/main.py"
