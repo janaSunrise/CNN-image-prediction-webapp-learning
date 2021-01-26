@@ -6,11 +6,14 @@ name = "pypi"
 [packages]
 h5py = "*"
 tensorboard = "*"
+grpcio = "*"
 numpy = "*"
+scipy = "*"
 pillow = "*"
 streamlit = "*"
 keras = "*"
 tensorflow = "*"
+imageio = "*"
 
 [dev-packages]
 

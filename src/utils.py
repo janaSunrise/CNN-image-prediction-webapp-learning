@@ -12,8 +12,8 @@ from keras.utils import CustomObjectScope
 
 keras_backend.reset_uids()
 
-model = './model/model_json.json'
-weights = './model/mobilenetImagenet.h5'
+model = 'src/model/model_json.json'
+weights = 'src/model/mobilenetImagenet.h5'
 
 with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
     with open(model, 'r') as f:

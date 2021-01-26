@@ -3,12 +3,11 @@ import argparse
 import random
 import os
 
+
 def create(src, dst):
-    """
-    Creates noise in our dataset to train the de-noising model
-    """
+    """Creates noise in our dataset to train the de-noising model"""
     for image in os.listdir(src):
-        if(image.endswith(".jpg") or image.endswith(".png") or image.endswith(".jpeg")):
+        if image.endswith(".jpg") or image.endswith(".png") or image.endswith(".jpeg"):
             img = Image.open(os.path.join(src, image))
             dims = img.size
             fact = random.uniform(0.2, 0.45) 
@@ -20,7 +19,7 @@ def create(src, dst):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description="utility to create deresoulution data")
+    parser = argparse.ArgumentParser(description="utility to create de-resolution data")
     parser.add_argument('-src', required=True, help='src path')
     parser.add_argument('-dst', required=True, help='dst path')
     args = parser.parse_args()
