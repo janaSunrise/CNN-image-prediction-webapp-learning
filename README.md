@@ -1,68 +1,30 @@
-# CNN Image Detection
+# CNN Image Detection webapp
+
+**Note**: The project github repo name has been changed to ensure this does not collide with my
+such projects in the future. Sorry for the inconvenience.
 
 ## Contents
----
   #### Image Deresolution Script
-  - This script creates a deresolution face dataset for you!
+  - This script creates a deresolution noisy face dataset for you!
   
-  #### Django Image Classifier
+  #### Image Classifier
   
-  - The Django folder contains all the files needed for our netlify site implmentation
+  - The `app` folder contains the implementation for loading models, and predicting images.
   
   - Model used: Convolutional Neural Network (CNN)
   - Libraries used: Tensorflow, and Keras
     
-##### Steps to start the Django Server in localhost:8000
-    
-  1. Open up Anaconda3 command prompt or regular command prompt
-  
-  2. change directory to where django folder is located
-  ```
-  cd [file location]
-  ```
-  
-  3. Create virtual environment using python 3.6.x:
-  **conda**
-  NOTE: environment name does not matter
-  ```
-  conda create -n [environment name] python=3.6
-  ```
-      
-  4. Activate your virtual environment by:
-  **conda**
-  ```
-  conda activate [environment name]
-  ```
-      
-  5. Install dependencies from requirements.txt file:
-  ```
-  pip install -r requirements.txt
-  
-                  or
-  
-  pip3 install -r requirements.txt
-  ```
+## Installation and usage.
 
-  6. Add the database to the project for saving images and predictions
-  ```
-  python manage.py makemigrations
-        or, if the above doesn't work
-  python manage.py makemigrations cnn
-  ```
+This project uses `pipenv` for dependency management. You need to ensure that you have `pipenv`
+installed on your system.
 
-  and, Create the database by executing this command:
-  ```
-  python manage.py migrate
-  ```
-      
-  7. Activate the server in localhost:8000:
-  ```
-  python manage.py runserver
-  ```
-      
-  8. Go to the browser and access local host:
-  <p>In url bar, search "localhost:8000" or any similar local hosts.</p>
-      
+Here's how to install the dependencies, and get started.
+
+- Install it using **`pipenv sync -d`**
+- Once done, run the webapp using **`pipenv run start`**
+
+And It'll start on Port 8501 by default, plus it opens the site too on webbrowser.
 
 ## Resources
 - [CNN Slides](https://docs.google.com/presentation/d/1a0WRuEHIr7HNCJbs-l3ocstHtAtfSL8GbBNvRIgH0lU/edit#slide=id.g96c15fa444_1_3)
