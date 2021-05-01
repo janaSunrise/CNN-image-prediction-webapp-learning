@@ -11,7 +11,7 @@ from tempfile import NamedTemporaryFile
 import streamlit as st
 from PIL import Image
 
-from utils import predict
+from .utils import predict
 
 # -- Config the warnings -- #
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -38,7 +38,10 @@ if st.sidebar.button("Click here to classify!"):
     else:
         with st.spinner("Classifying..."):
             predictions = predict(img_file.name)
-            time.sleep(2)
+            time.sleep(1)
 
             st.success("Done!")
-            st.header(predictions)
+
+            main_pred = predictions.pop(0)
+            st.markdown(f"## Prediction: {main_pred}")
+            st.markdown(f"### Other predictions: {', '.join(predictions)}")

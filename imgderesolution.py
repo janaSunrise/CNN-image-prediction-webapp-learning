@@ -1,7 +1,8 @@
-from PIL import Image
 import argparse
 import random
 import os
+
+from PIL import Image
 
 
 def create(src, dst):
