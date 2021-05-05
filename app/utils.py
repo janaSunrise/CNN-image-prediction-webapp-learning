@@ -33,6 +33,6 @@ def predict(img):
     predictions = []
 
     for (i, (predId, pred, prob)) in enumerate(result_decode[0]):
-        predictions.append(f"{pred.replace('_', ' ')}: {prob * 100:.2f}%")
+        predictions.append(f"{pred.replace('_', ' ').title()} [{prob * 100:.2f}%]")
 
     return predictions

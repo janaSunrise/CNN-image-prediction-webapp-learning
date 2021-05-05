@@ -40,8 +40,10 @@ if st.sidebar.button("Click here to classify!"):
             predictions = predict(img_file.name)
             time.sleep(1)
 
+            st.balloons()
             st.success("Done!")
 
             main_pred = predictions.pop(0)
-            st.markdown(f"## Prediction: {main_pred}")
-            st.markdown(f"### Other predictions: {', '.join(predictions)}")
+
+            st.header(f"Prediction: {main_pred}")
+            st.subheader(f"Other predictions: \n{', '.join(predictions)}")
