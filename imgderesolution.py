@@ -17,13 +17,21 @@ def create_noise(src, dst):
 
             compress_result = img.resize((height, width), Image.ANTIALIAS)
             decompress_result = compress_result.resize(dims, Image.NEAREST)
-            decompress_result.save(os.path.join(dst, f"{image[:-4]}_deres.jpg"), quality=95)
+            decompress_result.save(
+                os.path.join(dst, f"{image[:-4]}_deres.jpg"), quality=95
+            )
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Utility script to generate de-resolution data")
-    parser.add_argument("-src", required=True, help="Path to the folder containing images")
-    parser.add_argument("-dst", required=True, help="Final destination to save the images")
+    parser = argparse.ArgumentParser(
+        description="Utility script to generate de-resolution data"
+    )
+    parser.add_argument(
+        "-src", required=True, help="Path to the folder containing images"
+    )
+    parser.add_argument(
+        "-dst", required=True, help="Final destination to save the images"
+    )
     args = parser.parse_args()
 
     args.src, args.dst = os.path.expanduser(args.src), os.path.expanduser(args.dst)
