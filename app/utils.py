@@ -10,12 +10,12 @@ from tensorflow.keras.initializers import glorot_uniform
 
 keras_backend.reset_uids()
 
-model = 'app/model/model_json.json'
-weights = 'app/model/mobilenetImagenet.h5'
+model = "app/model/model_json.json"
+weights = "app/model/mobilenet_imagenet.h5"
 
-with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
-    with open(model, 'r') as f:
-        model = model_from_json(f.read())
+with CustomObjectScope({"GlorotUniform": glorot_uniform()}):
+    with open(model, "r") as file:
+        model = model_from_json(file.read())
         model.load_weights(weights)
 
 
